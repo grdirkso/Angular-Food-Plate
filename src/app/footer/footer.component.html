@@ -1,5 +1,5 @@
 <footer class="header-footer">
-    <img [src]="icon" [alt]="logoAlt">
+    <img [src]="icon" [alt]="logoAlt" (click)="moreInfo()">
     <p>&copy;2018FoodPlateInc.<small [attr.data-version]="versionString" [class.footer--update]="!isCurrent"> Version # {{versionString}}</small></p>
     
 </footer>
