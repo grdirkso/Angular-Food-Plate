@@ -10,8 +10,11 @@ export class FooterComponent implements OnInit {
   versionString: string = '1.0.0';
   icon: string = 'assets/images/icons/icons-29.png';
   logoAlt: string = 'FoodPlate Logo';
-  isCurrent: boolean = false;
-  
+  isCurrent: boolean = true;
+
+  moreInfo() {
+    alert('For more information about the Food Plate, visit https://www.choosemyplate.gov/');
+  }
 
   constructor() { }
 
