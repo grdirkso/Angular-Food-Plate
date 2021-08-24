@@ -7,7 +7,7 @@ import { UserStatusService } from './user-status.service';
 })
 export class UserService {
 
-  private user: User = new User(1, 'Kevin', 'M', '51+','M51+', {}, {fruitMet: false, vegMet: false, proteinMet: false, grainMet: false}, false, 'kevin@kevinruse.com');
+  private user: User = new User(1, 'Kevin', 'M', '51+','M51+', {}, {fruitMet: false, vegMet: true, proteinMet: false, grainMet: false}, false, 'kevin@kevinruse.com');
   constructor(
     @Optional() private userStatusService: UserStatusService
   ) {
