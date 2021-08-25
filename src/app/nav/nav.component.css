@@ -9,7 +9,7 @@ ul {
     align-items:center;
     justify-content:center;
 }
-li {
+li>a{
     color: #fff;
     text-decoration: none;
     display:inline;
@@ -22,11 +22,11 @@ li {
 }
 
 
-.active {
+nav ul li a.active{
     color: #ef952b;
 }
 
-li:last-child {
+li:last-child>a {
     background: none;
 }
 @media (max-width: 444px) {

@@ -9,6 +9,7 @@ import { User } from '../models/User';
 export class PlateComponent implements OnInit {
 
   @Input() user: User;
+  
   plateImgPath: string= '../../assets/images/plateImages/';
   fruitEmpty: string= `${this.plateImgPath}fruit-empty.png`;
   grainDairyEmpty: string= `${this.plateImgPath}graindairy-empty.png`;

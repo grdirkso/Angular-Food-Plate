@@ -1,22 +1,32 @@
 import { NgModule } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router"
+import { Route, RouterModule, Routes } from "@angular/router";
 import { DefaultComponent } from "./components/default/default.component";
+import { ExercisesComponent } from "./exercises/exercises.component";
+import { FarmersMarketsComponent } from "./farmers-markets/farmers-markets.component";
 import { PlateComponent } from "./plate/plate.component";
 import { RegisterComponent } from "./register/register.component";
-
+ 
+const fallbackRoute: Route = {
+    path:'**', component: DefaultComponent
+}
 const routes: Routes = [
-    {path: '', component: DefaultComponent},
-    {path: 'register', component: RegisterComponent},
-    {path: '**', component: PlateComponent}    
+    {
+        path: '', 
+        children: [
+            { path: '', component: DefaultComponent },
+            { path: 'register', component: RegisterComponent },
+            { path: 'farmersMarkets', component: FarmersMarketsComponent},
+            { path: 'exercises', component: ExercisesComponent},
+            { path: 'myPlate', component: PlateComponent},
+            fallbackRoute
+        ]
+    }
+    
 ];
-
+ 
 @NgModule({
-    imports: [
-        RouterModule.forRoot(routes)
-    ],
-    exports: [
-        RouterModule
-    ]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
 })
-
+ 
 export class AppRoutingModule {}
