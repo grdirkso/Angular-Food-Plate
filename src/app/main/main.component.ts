@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { User } from '../models/User';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'fp-main',
@@ -8,8 +9,12 @@ import { User } from '../models/User';
 })
 export class MainComponent implements OnInit {
 
+  router: Router;
+
   @Input() user: User;
-  constructor() { }
+  constructor(private _router: Router) {
+    this.router = _router;
+   }
 
   ngOnInit(): void {
   }
