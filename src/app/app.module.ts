@@ -15,6 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { MainComponent } from './main/main.component';
 import { HomeBtnComponent } from './home-btn/home-btn.component';
 import { NavComponent } from './nav/nav.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -37,7 +38,9 @@ import { NavComponent } from './nav/nav.component';
     CommonModule,
     BrowserModule,
     AppRoutingModule,
-    FoodGroupsModule
+    FoodGroupsModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   bootstrap: [AppComponent]
 })

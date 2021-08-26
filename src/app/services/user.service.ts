@@ -14,7 +14,7 @@ export class UserService {
     this.userStatusService.getUserStatus(this.user);
    }
 
-  gteUser(): User {
+  getUser(): User {
     return this.user;
   }
 }
