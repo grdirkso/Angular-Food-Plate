@@ -3,6 +3,7 @@ import { Route, RouterModule, Routes } from "@angular/router";
 import { DefaultComponent } from "./components/default/default.component";
 import { ExercisesComponent } from "./exercises/exercises.component";
 import { FarmersMarketsComponent } from "./farmers-markets/farmers-markets.component";
+import { foodGroupsRoutes } from "./food-groups/food-groups.routing";
 import { PlateComponent } from "./plate/plate.component";
 import { RegisterComponent } from "./register/register.component";
  
@@ -18,6 +19,7 @@ const routes: Routes = [
             { path: 'farmersMarkets', component: FarmersMarketsComponent},
             { path: 'exercises', component: ExercisesComponent},
             { path: 'myPlate', component: PlateComponent},
+            ...foodGroupsRoutes,
             fallbackRoute
         ]
     }

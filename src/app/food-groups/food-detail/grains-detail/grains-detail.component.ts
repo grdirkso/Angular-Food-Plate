@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-grains-detail',
+  selector: 'fp-grains-detail',
   templateUrl: './grains-detail.component.html',
   styleUrls: ['./grains-detail.component.css']
 })
