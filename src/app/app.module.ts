@@ -16,6 +16,7 @@ import { MainComponent } from './main/main.component';
 import { HomeBtnComponent } from './home-btn/home-btn.component';
 import { NavComponent } from './nav/nav.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TodaysGoalComponent } from './todays-goal/todays-goal.component';
 
 
 
@@ -32,7 +33,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RegisterComponent,
     DefaultComponent,
     ExercisesComponent,
-    FarmersMarketsComponent
+    FarmersMarketsComponent,
+    TodaysGoalComponent
   ],
   imports: [
     CommonModule,

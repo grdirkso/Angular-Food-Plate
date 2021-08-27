@@ -1,4 +1,6 @@
 <footer class="header-footer">
+    <p *ngIf="goal" (click)="clearGoal()">Don't forget today's goal! -
+        {{goal}}</p>
     <img [src]="icon" [alt]="logoAlt" (click)="moreInfo()">
     <p>&copy;2018FoodPlateInc.<small [attr.data-version]="versionString" [class.footer--update]="!isCurrent"> Version # {{versionString}}</small></p>
     
