@@ -24,23 +24,16 @@ export class RegisterComponent implements OnInit {
       'email' : [null, [Validators.compose([Validators.required, Validators.email])]],
       'gender' : [null, [Validators.required]],
       'ageGroup' : [null, [Validators.required]]
-    }, {updateOn: 'submit'} )
+    }, {updateOn: 'blur'} )
   }
 
   ngOnInit(): void {
+    this.userService.currentUser.subscribe(user => this.currentUser = user);
+    this.regForm.valueChanges.subscribe(value => console.log(value));
   }
 
   onSubmit(formValues) {
-    const currentUser = this.regForm.value;
-    this.currentUser = currentUser;
-    this.currentUser.id = 1;
-    this.currentUser.registered = true;
-    this.currentUser.reqsStatus = {
-      fruitMet: false, 
-      vegMet: false, 
-      proteinMet: false, 
-      grainMet: false
-    };
-    localStorage.setItem('user', JSON.stringify(currentUser))
+    this.userService.updateUser(formValues);
+    UserService.storeUserLocal(formValues);
   }
 }
