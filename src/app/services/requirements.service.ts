@@ -1,0 +1,22 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { Requirement } from '../models/requirement';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class RequirementsService {
+
+  private requirementsUrl = 'assets/server/requirements.json';
+
+  constructor(
+    private http: HttpClient
+  ) { }
+
+  getRequirements(): Observable<Requirement[]> {
+    return this.http.get<Requirement[]>(this.requirementsUrl);
+    
+  }
+}

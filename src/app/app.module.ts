@@ -17,6 +17,9 @@ import { HomeBtnComponent } from './home-btn/home-btn.component';
 import { NavComponent } from './nav/nav.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TodaysGoalComponent } from './todays-goal/todays-goal.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FoodComponent } from './food/food.component';
+
 
 
 
@@ -34,7 +37,8 @@ import { TodaysGoalComponent } from './todays-goal/todays-goal.component';
     DefaultComponent,
     ExercisesComponent,
     FarmersMarketsComponent,
-    TodaysGoalComponent
+    TodaysGoalComponent,
+    FoodComponent
   ],
   imports: [
     CommonModule,
@@ -42,7 +46,9 @@ import { TodaysGoalComponent } from './todays-goal/todays-goal.component';
     AppRoutingModule,
     FoodGroupsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
+
   ],
   bootstrap: [AppComponent]
 })
