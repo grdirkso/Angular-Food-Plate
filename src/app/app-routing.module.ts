@@ -10,12 +10,13 @@ import { RegisterComponent } from "./register/register.component";
 import { LeaveRegisterGuardService } from "./services/leave-register-guard.service";
 import { RegisterGuardService } from "./services/register-guard.service";
  
-class AllowFullAccessGuard implements CanActivate {
-    canActivate() {
-        console.log('FullAccessGuard has been accessed.');
-        return true;
-    }
-}
+// class AllowFullAccessGuard implements CanActivate {
+//     canActivate() {
+//         console.log('FullAccessGuard has been accessed.');
+//         return true;
+//     }
+// }
+
 const fallbackRoute: Route = {
     path:'**', component: DefaultComponent
 }
@@ -29,7 +30,10 @@ const routes: Routes = [
             { path: 'exercises', component: ExercisesComponent},
             { path: 'myPlate', component: PlateComponent, canActivate: [RegisterGuardService]},
             { path: 'nutritionInfo', component: FoodComponent },
-            ...foodGroupsRoutes,
+            {path: 'foodGroups', 
+                loadChildren: () => import('./food-groups/food-groups.module')
+                    .then(mod => mod.FoodGroupsModule)
+            },
             fallbackRoute
         ]
     }
@@ -39,7 +43,7 @@ const routes: Routes = [
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule],
-    providers: [AllowFullAccessGuard, RegisterGuardService, LeaveRegisterGuardService]
+    providers: [RegisterGuardService, LeaveRegisterGuardService]
 })
  
 export class AppRoutingModule {}

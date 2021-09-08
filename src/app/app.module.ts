@@ -10,7 +10,6 @@ import { RegisterComponent } from './register/register.component';
 import { DefaultComponent } from './components/default/default.component';
 import { ExercisesComponent } from './exercises/exercises.component';
 import { FarmersMarketsComponent } from './farmers-markets/farmers-markets.component';
-import { FoodGroupsModule } from './food-groups/food-groups.module';
 import { AppRoutingModule } from './app-routing.module';
 import { MainComponent } from './main/main.component';
 import { HomeBtnComponent } from './home-btn/home-btn.component';
@@ -44,7 +43,6 @@ import { FoodComponent } from './food/food.component';
     CommonModule,
     BrowserModule,
     AppRoutingModule,
-    FoodGroupsModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule
