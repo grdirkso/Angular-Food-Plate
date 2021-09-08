@@ -18,6 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TodaysGoalComponent } from './todays-goal/todays-goal.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FoodComponent } from './food/food.component';
+import { GoalsComponent } from './goals/goals.component';
 
 
 
@@ -37,7 +38,8 @@ import { FoodComponent } from './food/food.component';
     ExercisesComponent,
     FarmersMarketsComponent,
     TodaysGoalComponent,
-    FoodComponent
+    FoodComponent,
+    GoalsComponent
   ],
   imports: [
     CommonModule,
