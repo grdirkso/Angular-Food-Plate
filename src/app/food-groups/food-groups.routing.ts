@@ -3,10 +3,12 @@ import {VegetableDetailComponent} from './food-detail/vegetable-detail/vegetable
 import {FruitDetailComponent} from './food-detail/fruit-detail/fruit-detail.component';
 import {GrainsDetailComponent} from './food-detail/grains-detail/grains-detail.component';
 import { FoodGroupsComponent } from './food-groups.component';
+import { FoodGroupGuardService } from '../services/food-group-guard.service';
 
 export const foodGroupsRoutes = [
   {
     path: 'foodGroups',
+    canActivateChild: [FoodGroupGuardService],
     children: [
       {
         path: '',
